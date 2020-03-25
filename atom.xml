@@ -5,9 +5,9 @@
   
   <link href="/zh-CN/atom.xml" rel="self"/>
   
-  <link href="https://xiangql.github.io/zh-CN/"/>
+  <link href="https://xiangql.github.io/"/>
   <updated>2020-03-25T02:16:06.706Z</updated>
-  <id>https://xiangql.github.io/zh-CN/</id>
+  <id>https://xiangql.github.io/</id>
   
   <author>
     <name>经过</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://xiangql.github.io/zh-CN/2020/03/24/hello-world/"/>
-    <id>https://xiangql.github.io/zh-CN/2020/03/24/hello-world/</id>
+    <link href="https://xiangql.github.io/2020/03/24/hello-world/"/>
+    <id>https://xiangql.github.io/2020/03/24/hello-world/</id>
     <published>2020-03-24T08:43:55.003Z</published>
     <updated>2020-03-25T02:16:06.706Z</updated>
     
@@ -36,7 +36,7 @@
     
     
     
-      <category term="test" scheme="https://xiangql.github.io/zh-CN/tags/test/"/>
+      <category term="test" scheme="https://xiangql.github.io/tags/test/"/>
     
   </entry>
   
