@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MongoDB备份与恢复</title>
+    <url>/zh-CN/2020/03/26/mongodb-restore/</url>
+    <content><![CDATA[<p>###1、MongoDB数据库备份<br>    1、语法：<br>        mongodump -h dbhost -d dbname -o dbdirectory</p>
+<pre><code>    参数说明：
+        -h： MongDB所在服务器地址，例如：127.0.0.1，当然也可以指定端口号：127.0.0.1:27017
+        -d： 需要备份的数据库实例，例如：test
+        -o： 备份的数据存放位置，例如：/home/mongodump/，当然该目录需要提前建立，这个目录里面存放该数据库实例的备份数据。
+
+2、实例：
+    sudo rm -rf /home/momgodump/
+    sudo mkdir -p /home/momgodump
+    sudo mongodump -h 192.168.17.129:27017 -d itcast -o /home/mongodump/</code></pre><p>###2、MongoDB数据库恢复<br>    1、语法：<br>        mongorestore -h dbhost -d dbname –dir dbdirectory</p>
+<pre><code>    参数或名：
+        -h： MongoDB所在服务器地址
+        -d： 需要恢复的数据库实例，例如：test，当然这个名称也可以和备份时候的不一样，比如test2
+        -dir： 备份数据所在位置，例如：/home/mongodump/itcast/
+        -drop： 恢复的时候，先删除当前数据，然后恢复备份的数据。就是说，恢复后，备份后添加修改的数据都会被删除，慎用！
+
+2、实例：
+    mongorestore -h 192.168.17.129:27017 -d itcast_restore --dir /home/mongodump/itcast/</code></pre>]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的博客</title>
-    <url>/2020/03/26/my-one-blog/</url>
+    <url>/zh-CN/2020/03/26/my-one-blog/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
@@ -27,7 +56,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2020/03/25/hello-world/</url>
+    <url>/zh-CN/2020/03/25/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
