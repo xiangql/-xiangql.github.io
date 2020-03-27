@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>MongoDB备份与恢复</title>
-    <url>/zh-CN/2020/03/26/mongodb-restore/</url>
+    <url>/zh-CN/T200327N02/</url>
     <content><![CDATA[<p>1、MongoDB数据库备份<br>    1、语法：<br>        mongodump -h dbhost -d dbname -o dbdirectory</p>
 <a id="more"></a>
 <pre><code>    参数说明：
@@ -31,8 +31,8 @@
       </tags>
   </entry>
   <entry>
-    <title>hello-world</title>
-    <url>/zh-CN/2020/03/25/hello-world/</url>
+    <title>T200327N01</title>
+    <url>/zh-CN/T200327N01/</url>
     <content><![CDATA[<hr>
 <p>title: 你好，世界<br>tags: [Hexo,测试]<br>categories: 随笔</p>
 <hr>
