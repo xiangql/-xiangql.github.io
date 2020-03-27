@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>My Blog</title>
-    <url>/en-US/2020/03/26/my-one-blog/</url>
+    <title>MongoDB Backup and Restore</title>
+    <url>/zh-CN/2020/03/27/mongodb-restore/</url>
+    <content><![CDATA[<p>1、MongoDB Database Backup<br>    1、Grammar:<br>        mongodump -h dbhost -d dbname -o dbdirectory</p>
+<a id="more"></a>
+<pre><code>    Parameter description:
+        -h: Address of the server where mongdb is located, Example:127.0.0.1，Of course, you can also specify the port number, Example:127.0.0.1:27017
+        -d: Database instances that need to be backed up, such as:test
+        -o: Backup data storage location, such as: /home/mongodump/，The backup data storage location, for example, the directory needs to be established in advance, which stores the backup data of the database instance。
+
+2、Example:
+    sudo rm -rf /home/momgodump/
+    sudo mkdir -p /home/momgodump
+    sudo mongodump -h 192.168.17.129:27017 -d itcast -o /home/mongodump/</code></pre><p>2、MongoDB Database Restore<br>    1、Grammar:<br>        mongorestore -h dbhost -d dbname –dir dbdirectory</p>
+<pre><code>    Parameter description:
+        -h: Address of the server where mongdb is located, Example:127.0.0.1
+        -d: Database instances that need to be backed up, such as:test，Of course, the directory needs to be established in advance, which stores the backup data of the database instance，Like: test2
+        -dir: Backup data storage location, such as:/home/mongodump/itcast/
+        -drop: When restoring, delete the current data first, and then restore the backed up data. That is to say, after recovery, the data added and modified after backup will be deleted. Use with caution!
+
+2、Example:
+    mongorestore -h 192.168.17.129:27017 -d itcast_restore --dir /home/mongodump/itcast/</code></pre><blockquote>
+<p><a href="https://fanyi.baidu.com/" target="_blank" rel="noopener">百度翻译</a>!</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/zh-CN/2020/03/26/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -18,29 +52,11 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>web</category>
+        <category>Eassy</category>
       </categories>
       <tags>
-        <tag>blog</tag>
-        <tag>test</tag>
+        <tag>Hexo</tag>
+        <tag>Test</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/en-US/2020/03/26/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
 </search>
